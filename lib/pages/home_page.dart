@@ -13,7 +13,12 @@ class MyHomePage extends StatelessWidget {
         title: const Text('Список стран Африки'),
       ),
       body: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          childAspectRatio: 0.9,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10
+          ),
         itemCount: countryList.length,
         itemBuilder: (BuildContext context, int  index) {
           return ConstrCountry(name_country: countryList[index].name, flag_country: countryList[index].flag, square_country: countryList[index].square, population_country: countryList[index].population,);

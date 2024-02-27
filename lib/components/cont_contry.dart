@@ -14,16 +14,25 @@ class ConstrCountry extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Center(
-            child: Text('${name_country}'),
+            child: Text('${name_country}',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold ),),
             ),
           Center(
             child: Image.network('${flag_country}'),
           ),
           Center(
-            child: Text('Площадь: ${square_country} кв. км.'),
+            child: Text('Площадь: ${square_country} кв. км.',
+            softWrap: true,
+            maxLines: 5,
+            style: TextStyle(fontSize: 12),
+            ),
           ),
           Center(
-            child: Text('Население: ${population_country} млн. чел.'),
+            child: Text('Население: ${population_country} млн. чел.',
+            softWrap: true,
+            maxLines: 5,
+            style: TextStyle(fontSize: 12),
+            ),
           )
         ]
         ),
